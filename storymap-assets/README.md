@@ -1,145 +1,166 @@
-# Storymap Assets
+# StoryMap Assets
 
-This directory contains all media assets for the **PBI–Downtown APM Connector** storymap project. All assets are organized by category and publicly accessible via GitHub Pages.
+This folder contains public assets for **The Future of Mobility** GIS StoryMap.
 
-## 📂 Directory Structure
+Assets are organized for use through GitHub Pages, allowing images and reference documents to be linked directly from ArcGIS StoryMaps or other web-based presentation tools.
 
+## Public Asset Library
+
+The public asset library is available at:
+
+```text
+https://ddecamerica.github.io/the-future-of-mobility/
 ```
+
+## Folder Structure
+
+```text
 storymap-assets/
-├── README.md (this file)
+├── README.md
+│
 └── assets/
-    └── images/
-        ├── cover/           # Hero images for storymap introduction
-        ├── sections/        # Section-specific graphics and visuals
-        ├── maps/            # Spatial visualizations and analysis maps
-        └── logos/           # Project branding and logos
+    ├── images/
+    │   ├── cover/
+    │   ├── logos/
+    │   └── sections/
+    │
+    └── documents/
+        └── guidance/
 ```
 
-## 🖼️ Asset Categories
+## Asset Categories
 
-### Cover Images
-**Location:** `assets/images/cover/`
+### `assets/images/cover/`
 
-Hero images displayed at the beginning of the storymap. These serve as the introduction to each major section.
+Hero and opening visuals for the StoryMap.
 
-**Current Assets:**
-- `hialeah-cover-main.jpg` – Primary cover image
+Current examples:
 
-### Section Images
-**Location:** `assets/images/sections/`
-
-Graphics and visuals specific to different sections of the storymap, including conditions analysis, community engagement, and safety information.
-
-**Current Assets:**
-- `existing-conditions-01.jpg` – Existing conditions analysis graphics
-- `community-engagement-01.jpg` – Community engagement visuals
-- `safety-corridor-01.jpg` – Safety corridor information
-
-### Maps
-**Location:** `assets/images/maps/`
-
-Spatial visualizations, analysis maps, and geographic data representations.
-
-**Current Assets:**
-- `crash-analysis-map.jpg` – Crash analysis and accident data visualization
-- `priority-corridors-map.jpg` – Priority corridors identification map
-
-### Logos
-**Location:** `assets/images/logos/`
-
-Project branding assets and logos.
-
-**Current Assets:**
-- `project-logo.png` – Primary project logo
-
-## 🔗 Accessing Assets via GitHub Pages
-
-All assets are publicly available through GitHub Pages with the following URL pattern:
-
-```
-https://ddecamerica.github.io/the-future-of-mobility/storymap-assets/assets/images/[category]/[filename]
+```text
+future-mobility-cover-hero-01.png
+future-mobility-cover-hero-02.png
 ```
 
-### Example URLs
+### `assets/images/logos/`
 
-**Cover Images:**
-```
-https://ddecamerica.github.io/the-future-of-mobility/storymap-assets/assets/images/cover/hialeah-cover-main.jpg
-```
+DDEC logo files and project branding assets.
 
-**Section Images:**
-```
-https://ddecamerica.github.io/the-future-of-mobility/storymap-assets/assets/images/sections/existing-conditions-01.jpg
-https://ddecamerica.github.io/the-future-of-mobility/storymap-assets/assets/images/sections/community-engagement-01.jpg
-https://ddecamerica.github.io/the-future-of-mobility/storymap-assets/assets/images/sections/safety-corridor-01.jpg
+Current examples:
+
+```text
+ddec-logo-primary-black.png
+ddec-logo-reverse-white.png
 ```
 
-**Maps:**
+### `assets/images/sections/`
+
+Section graphics, statistical cards, and visual storytelling assets.
+
+Current examples:
+
+```text
+pbc-stat-new-residents-90k-01.png
+pbc-stat-population-2030-163m-01.png
+pbc-stat-visitors-fy2024-25-106m-01.png
+pbc-stat-drive-alone-77pct-01.png
+pbi-stat-passengers-85m-01.png
 ```
-https://ddecamerica.github.io/the-future-of-mobility/storymap-assets/assets/images/maps/crash-analysis-map.jpg
-https://ddecamerica.github.io/the-future-of-mobility/storymap-assets/assets/images/maps/priority-corridors-map.jpg
+
+Mini versions may be used when a lighter or more compact version of a graphic is needed.
+
+Example:
+
+```text
+pbc-stat-drive-alone-77pct-01-mini.png
 ```
 
-**Logos:**
+### `assets/documents/guidance/`
+
+PDF guidance documents and reference files for StoryMap production.
+
+Current examples:
+
+```text
+future-mobility-storymap-guidance.pdf
+future-mobility-storymap-guidance-optimized.pdf
 ```
-https://ddecamerica.github.io/the-future-of-mobility/storymap-assets/assets/images/logos/project-logo.png
+
+## Public URL Patterns
+
+Use this structure for image assets:
+
+```text
+https://ddecamerica.github.io/the-future-of-mobility/storymap-assets/assets/images/[folder]/[filename]
 ```
 
-## 📝 How to Add New Assets
+Example:
 
-1. **Navigate to the appropriate category folder** (cover, sections, maps, or logos)
-2. **Upload your image file** directly via GitHub's web interface or Git
-3. **Use the URL pattern above** to reference the image in your storymap
-4. **Update this README** if adding new asset categories or significant changes
+```text
+https://ddecamerica.github.io/the-future-of-mobility/storymap-assets/assets/images/cover/future-mobility-cover-hero-01.png
+```
 
-## 🗺️ GIS Story Map Integration
+Use this structure for document assets:
 
-### ArcGIS StoryMaps
-1. In your story, add an image element
-2. Click "Web"
-3. Paste the GitHub Pages URL from above
-4. The image will load directly from this repository
+```text
+https://ddecamerica.github.io/the-future-of-mobility/storymap-assets/assets/documents/guidance/[filename]
+```
 
-### Other Platforms (Mapbox, etc.)
-Most GIS platforms support embedding images via URL. Simply use the GitHub Pages URLs provided above.
+Example:
 
-## 📊 Project Information
+```text
+https://ddecamerica.github.io/the-future-of-mobility/storymap-assets/assets/documents/guidance/future-mobility-storymap-guidance.pdf
+```
 
-**Project Name:** PBI–Downtown APM Connector
+## Naming Rules
 
-**Vision:** A connected, scalable, and financially sustainable transportation future for Palm Beach County
+Use simple, stable, web-safe file names.
 
-**Repository:** https://github.com/ddecamerica/the-future-of-mobility
+Rules:
 
-**GitHub Pages Site:** https://ddecamerica.github.io/the-future-of-mobility/
+1. Use lowercase letters.
+2. Use hyphens instead of spaces.
+3. Avoid underscores, parentheses, accents, and special characters.
+4. Keep names descriptive enough to understand the file purpose.
+5. Use numbering when multiple versions or variations exist.
+6. Use `mini` only for intentionally smaller or compact versions.
+7. Do not rename or move assets after their URLs are used in the StoryMap.
 
-## 🏷️ Repository Topics
+Good:
 
-- `storymap` – Storytelling with maps
-- `arcgis-storymaps` – ArcGIS StoryMaps platform
-- `gis` – Geographic Information Systems
-- `transportation` – Transportation planning and analysis
-- `mobility` – Connected mobility solutions
-- `transit` – Public transit systems
-- `apm` – Autonomous People Mover
-- `palm-beach-county` – Palm Beach County, Florida
-- `github-pages` – Static site hosting
-- `static-assets` – Static media assets library
-- `ddec` – DDEC America
+```text
+future-mobility-cover-hero-01.png
+pbc-stat-drive-alone-77pct-01.png
+pbc-stat-drive-alone-77pct-01-mini.png
+ddec-logo-primary-black.png
+future-mobility-storymap-guidance.pdf
+```
 
-## 📄 License
+Avoid:
 
-This project is licensed under the **GNU General Public License v3.0**. See LICENSE file for details.
+```text
+Future Mobility Cover Final.png
+PBC Stat FINAL FINAL (2).png
+DDEC Logo White Version New.png
+The-Future-of-Mobility-Story-Map-Guidance.pdf
+```
 
-## 🤝 Contributing
+## Updating Assets
 
-For updates or additions to these assets, please:
-1. Add files to the appropriate category folder
-2. Update this README with new asset information
-3. Ensure all files follow the naming convention
-4. Test URLs to verify they work correctly
+Once an asset URL has been added to the StoryMap, keep the file name and folder location unchanged.
 
----
+For minor corrections, replace the existing file using the same file name.
 
-**Last Updated:** June 3, 2026  
-**Maintained by:** DDEC America
+For major revisions, create a new versioned file and update the StoryMap link intentionally.
+
+Example:
+
+```text
+future-mobility-cover-hero-01.png
+future-mobility-cover-hero-02.png
+```
+
+## Dynamic GIS Maps
+
+Dynamic maps are expected to be managed directly inside the GIS/StoryMap environment.
+
+Static map exports do not need to be stored here unless they are required as standalone images, backup visuals, or non-interactive graphics.
