@@ -1,289 +1,864 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PBI–Downtown APM Connector | Storymap Assets</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Future of Mobility | StoryMap Asset Library</title>
+  <meta
+    name="description"
+    content="Public asset library for The Future of Mobility StoryMap, Palm Beach County's Connected Mobility Network."
+  />
+  <style>
+    :root {
+      --background: #f6f6f3;
+      --surface: #ffffff;
+      --surface-soft: #f1f1ee;
+      --ink: #080808;
+      --muted: #5f5f5a;
+      --line: #deded8;
+      --line-strong: #b8b8af;
+      --inverse: #ffffff;
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.08);
+      --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        .container {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            max-width: 900px;
-            width: 100%;
-            padding: 60px 40px;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        h1 {
-            color: #333;
-            margin-bottom: 12px;
-            font-size: 2.5em;
-        }
+    body {
+      min-height: 100vh;
+      font-family: var(--sans);
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(0, 0, 0, 0.08), transparent 30rem),
+        linear-gradient(180deg, #ffffff 0%, var(--background) 52%, #ecece6 100%);
+      line-height: 1.5;
+    }
 
-        .subtitle {
-            color: #666;
-            font-size: 1.1em;
-            margin-bottom: 40px;
-            font-weight: 300;
-        }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-        .description {
-            color: #555;
-            line-height: 1.8;
-            margin-bottom: 40px;
-            font-size: 1em;
-        }
+    .page {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 56px;
+    }
 
-        .section {
-            margin: 30px 0;
-        }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 16px 0 36px;
+    }
 
-        .section h2 {
-            color: #667eea;
-            font-size: 1.5em;
-            margin-bottom: 15px;
-        }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
 
-        .asset-list {
-            background: #f8f9fa;
-            border-left: 4px solid #667eea;
-            padding: 20px;
-            border-radius: 6px;
-            margin: 15px 0;
-        }
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+    }
 
-        .asset-list ul {
-            list-style: none;
-            padding-left: 0;
-        }
+    .topnav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(16px);
+    }
 
-        .asset-list li {
-            padding: 8px 0;
-            color: #555;
-            display: flex;
-            align-items: center;
-        }
+    .topnav a {
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+    }
 
-        .asset-list li:before {
-            content: "📁";
-            margin-right: 10px;
-            font-size: 1.1em;
-        }
+    .topnav a:hover {
+      color: var(--ink);
+      background: var(--surface-soft);
+    }
 
-        .asset-list li.file:before {
-            content: "🖼️";
-        }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(40px, 6vw, 72px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
 
-        .code-block {
-            background: #2d2d2d;
-            color: #f8f8f2;
-            padding: 15px;
-            border-radius: 6px;
-            overflow-x: auto;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9em;
-            line-height: 1.5;
-            margin: 15px 0;
-        }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -10% -42% 44%;
+      height: 340px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.08);
+      filter: blur(32px);
+      transform: rotate(-8deg);
+      pointer-events: none;
+    }
 
-        .info-box {
-            background: #e3f2fd;
-            border-left: 4px solid #2196F3;
-            padding: 20px;
-            border-radius: 6px;
-            margin: 20px 0;
-        }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      margin-bottom: 22px;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      background: var(--surface-soft);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
 
-        .info-box strong {
-            color: #1976D2;
-        }
+    .hero h1 {
+      max-width: 820px;
+      font-size: clamp(46px, 7vw, 88px);
+      line-height: 0.92;
+      letter-spacing: -0.075em;
+    }
 
-        .info-box p {
-            color: #555;
-            margin: 10px 0;
-        }
+    .hero-lede {
+      max-width: 720px;
+      margin-top: 26px;
+      color: var(--muted);
+      font-size: clamp(18px, 2vw, 22px);
+      letter-spacing: -0.02em;
+    }
 
-        .footer {
-            margin-top: 50px;
-            padding-top: 30px;
-            border-top: 1px solid #eee;
-            color: #999;
-            font-size: 0.9em;
-            text-align: center;
-        }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 42px;
+    }
 
-        .button {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 6px;
-            text-decoration: none;
-            margin-top: 20px;
-            transition: background 0.3s ease;
-        }
+    .meta-card {
+      min-height: 110px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: #fafafa;
+    }
 
-        .button:hover {
-            background: #764ba2;
-        }
+    .meta-label {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
 
-        @media (max-width: 600px) {
-            .container {
-                padding: 30px 20px;
-            }
+    .meta-value {
+      margin-top: 12px;
+      font-size: 20px;
+      font-weight: 750;
+      letter-spacing: -0.04em;
+    }
 
-            h1 {
-                font-size: 1.8em;
-            }
+    .section {
+      margin-top: 28px;
+      padding: clamp(28px, 4vw, 44px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.76);
+      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.04);
+    }
 
-            .subtitle {
-                font-size: 0.95em;
-            }
-        }
-    </style>
+    .section-header {
+      display: grid;
+      grid-template-columns: 0.76fr 1.24fr;
+      gap: 32px;
+      align-items: start;
+      margin-bottom: 28px;
+    }
+
+    .section-kicker {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin-top: 8px;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1;
+      letter-spacing: -0.06em;
+    }
+
+    .section-copy {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .rule {
+      height: 1px;
+      margin: 26px 0;
+      background: var(--line);
+    }
+
+    .path-card {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: center;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--ink);
+      color: var(--inverse);
+    }
+
+    .path-card code,
+    .asset-url code,
+    .file-name code {
+      font-family: var(--mono);
+      font-size: 13px;
+      line-height: 1.6;
+      overflow-wrap: anywhere;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 15px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--inverse);
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      background: #242424;
+    }
+
+    .button.secondary {
+      border-color: var(--line);
+      background: var(--surface);
+      color: var(--ink);
+    }
+
+    .button.secondary:hover {
+      background: var(--surface-soft);
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .principle {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+    }
+
+    .principle strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 16px;
+      letter-spacing: -0.03em;
+    }
+
+    .principle span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .asset-table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 920px;
+    }
+
+    th,
+    td {
+      padding: 16px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      color: var(--muted);
+      background: var(--surface-soft);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    td {
+      color: #222;
+      font-size: 14px;
+    }
+
+    .category-pill {
+      display: inline-flex;
+      padding: 5px 9px;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+
+    .asset-url {
+      max-width: 390px;
+      color: var(--muted);
+    }
+
+    .file-name code {
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .copy-cell {
+      width: 1%;
+      white-space: nowrap;
+    }
+
+    .folder-tree {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .folder {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+    }
+
+    .folder code {
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .folder p {
+      margin-top: 9px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .naming-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .naming-item {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: var(--surface);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .naming-item strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--ink);
+    }
+
+    .callout {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: center;
+      margin-top: 20px;
+      padding: 22px;
+      border: 1px solid var(--ink);
+      border-radius: var(--radius-md);
+      background: var(--ink);
+      color: var(--inverse);
+    }
+
+    .callout p {
+      max-width: 720px;
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .callout strong {
+      color: var(--inverse);
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 30px 4px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .toast {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 10;
+      transform: translateY(20px);
+      opacity: 0;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--inverse);
+      font-size: 13px;
+      font-weight: 800;
+      box-shadow: var(--shadow);
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .toast.is-visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    @media (max-width: 900px) {
+      .topbar,
+      footer,
+      .callout,
+      .path-card,
+      .section-header {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar,
+      footer {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .topnav {
+        width: 100%;
+        overflow-x: auto;
+        justify-content: flex-start;
+      }
+
+      .meta-grid,
+      .grid-3,
+      .folder-tree,
+      .naming-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .page {
+        width: min(100% - 20px, 1180px);
+      }
+
+      .hero,
+      .section {
+        border-radius: 22px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🗺️ PBI–Downtown APM Connector</h1>
-        <p class="subtitle">Storymap Assets Repository</p>
+  <div class="page">
+    <header class="topbar" aria-label="Site header">
+      <a class="brand" href="#top" aria-label="The Future of Mobility home">
+        <span class="brand-mark">FM</span>
+        <span>The Future of Mobility</span>
+      </a>
+      <nav class="topnav" aria-label="Primary navigation">
+        <a href="#assets">Assets</a>
+        <a href="#structure">Structure</a>
+        <a href="#naming">Naming</a>
+        <a href="https://github.com/ddecamerica/the-future-of-mobility" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+    </header>
 
-        <div class="description">
-            <p>Welcome to the storymap assets repository for the <strong>PBI–Downtown APM Connector</strong> project. This site hosts all media assets used in our GIS story map, including cover images, section graphics, maps, and project logos.</p>
+    <main id="top">
+      <section class="hero">
+        <div class="eyebrow">StoryMap Asset Library</div>
+        <h1>Palm Beach County’s Connected Mobility Network</h1>
+        <p class="hero-lede">
+          Public image library for the GIS StoryMap supporting DDEC’s Future of Mobility proposal, including cover visuals, statistical graphics, route maps, network diagrams, and project branding.
+        </p>
+
+        <div class="meta-grid" aria-label="Project metadata">
+          <article class="meta-card">
+            <div class="meta-label">Project</div>
+            <div class="meta-value">The Future of Mobility</div>
+          </article>
+          <article class="meta-card">
+            <div class="meta-label">Focus</div>
+            <div class="meta-value">PBI to Downtown WPB</div>
+          </article>
+          <article class="meta-card">
+            <div class="meta-label">Prepared by</div>
+            <div class="meta-value">DDEC LLC</div>
+          </article>
+          <article class="meta-card">
+            <div class="meta-label">Forum</div>
+            <div class="meta-value">2026 ULI West Palm Beach</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="overview">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Project context</div>
+            <h2>One place for every StoryMap image link.</h2>
+          </div>
+          <p class="section-copy">
+            This repository is the public source for StoryMap media assets. The main proposal presents a five-phase mobility network for Palm Beach County, with Phase 1 focused on a Downtown West Palm Beach and airport connector. This page keeps image URLs clean, consistent, and easy to share with the GIS StoryMap team.
+          </p>
         </div>
 
-        <div class="info-box">
-            <strong>📍 Project Vision:</strong>
-            <p>Planning, vision, and infrastructure behind the PBI–Downtown APM Connector: A connected, scalable, and financially sustainable transportation future for Palm Beach County.</p>
+        <div class="grid-3">
+          <article class="principle">
+            <strong>Phase 1 reference</strong>
+            <span>Downtown WPB and PBI Airport connector. 5.4 miles, 9 stations, elevated guideway concept.</span>
+          </article>
+          <article class="principle">
+            <strong>Network role</strong>
+            <span>Connects airport, Convention Center, CityPlace, Brightline, NoRa, Palm Tran, Tri-Rail, Amtrak, and RideWPB.</span>
+          </article>
+          <article class="principle">
+            <strong>Asset purpose</strong>
+            <span>Hosts images, maps, graphics, and brand assets used by the GIS StoryMap freelancer.</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="assets">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Direct URLs</div>
+            <h2>Copy links from the asset catalog.</h2>
+          </div>
+          <p class="section-copy">
+            Use the full GitHub Pages URL in ArcGIS StoryMaps or any other web-based GIS publishing tool. Upload the files using the exact folder and file names shown below, then copy the generated public links.
+          </p>
         </div>
 
-        <div class="section">
-            <h2>📂 Asset Structure</h2>
-            <div class="asset-list">
-                <ul>
-                    <li>storymap-assets/</li>
-                    <li class="indent">
-                        <ul style="margin-left: 20px;">
-                            <li>assets/</li>
-                            <li class="indent">
-                                <ul style="margin-left: 20px;">
-                                    <li>images/</li>
-                                    <li class="indent">
-                                        <ul style="margin-left: 20px;">
-                                            <li class="file">cover/ – Cover images</li>
-                                            <li class="file">sections/ – Section-specific graphics</li>
-                                            <li class="file">maps/ – Map visualizations</li>
-                                            <li class="file">logos/ – Branding assets</li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+        <div class="path-card">
+          <code id="base-url">https://ddecamerica.github.io/the-future-of-mobility/storymap-assets/assets/images</code>
+          <button class="button secondary" type="button" data-copy="#base-url">Copy base URL</button>
         </div>
 
-        <div class="section">
-            <h2>🔗 How to Access Images</h2>
-            <p style="margin-bottom: 15px; color: #555;">All assets are publicly available through GitHub Pages. Use these URLs in your GIS story map:</p>
-            
-            <div class="code-block">
-https://ddecamerica.github.io/the-future-of-mobility/storymap-assets/assets/images/[category]/[filename]
-            </div>
+        <div class="rule"></div>
 
-            <p style="color: #666; margin-top: 15px;"><strong>Example URLs:</strong></p>
-            <div class="asset-list">
-                <ul>
-                    <li class="file">Cover: <code style="background: #f0f0f0; padding: 2px 6px; border-radius: 3px;">...images/cover/hialeah-cover-main.jpg</code></li>
-                    <li class="file">Section: <code style="background: #f0f0f0; padding: 2px 6px; border-radius: 3px;">...images/sections/existing-conditions-01.jpg</code></li>
-                    <li class="file">Map: <code style="background: #f0f0f0; padding: 2px 6px; border-radius: 3px;">...images/maps/crash-analysis-map.jpg</code></li>
-                    <li class="file">Logo: <code style="background: #f0f0f0; padding: 2px 6px; border-radius: 3px;">...images/logos/project-logo.png</code></li>
-                </ul>
-            </div>
+        <div class="asset-table-wrap" role="region" aria-label="Recommended StoryMap asset catalog" tabindex="0">
+          <table>
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Recommended file name</th>
+                <th>Use in StoryMap</th>
+                <th>Direct URL</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="asset-rows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section" id="structure">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Folder structure</div>
+            <h2>Keep the repo organized by use case.</h2>
+          </div>
+          <p class="section-copy">
+            The structure below avoids unrelated labels like Hialeah, crash analysis, or community engagement. It is specific to The Future of Mobility and the Palm Beach County APM concept.
+          </p>
         </div>
 
-        <div class="section">
-            <h2>✨ Asset Categories</h2>
-            
-            <div style="margin: 20px 0;">
-                <h3 style="color: #555; margin-bottom: 10px;">📸 Cover Images</h3>
-                <p style="color: #666; margin-bottom: 10px;">Hero images for the storymap introduction</p>
-                <div class="asset-list">
-                    <ul>
-                        <li class="file">hialeah-cover-main.jpg</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="folder-tree">
+          <article class="folder">
+            <code>assets/images/brand/</code>
+            <p>DDEC logos, project marks, and neutral brand assets.</p>
+          </article>
+          <article class="folder">
+            <code>assets/images/cover/</code>
+            <p>Hero images and opening visuals for the StoryMap.</p>
+          </article>
+          <article class="folder">
+            <code>assets/images/statistics/</code>
+            <p>Visual cards for population, visitors, airport passengers, and travel behavior.</p>
+          </article>
+          <article class="folder">
+            <code>assets/images/phase-01/</code>
+            <p>Route maps, station graphics, and visuals for the Downtown WPB and PBI connector.</p>
+          </article>
+          <article class="folder">
+            <code>assets/images/network/</code>
+            <p>Regional network integration graphics and transit connection diagrams.</p>
+          </article>
+          <article class="folder">
+            <code>assets/images/last-mile/</code>
+            <p>Autonomous vehicle zone graphics and first-mile or last-mile connection visuals.</p>
+          </article>
+        </div>
+      </section>
 
-            <div style="margin: 20px 0;">
-                <h3 style="color: #555; margin-bottom: 10px;">📋 Section Images</h3>
-                <p style="color: #666; margin-bottom: 10px;">Graphics for each storymap section</p>
-                <div class="asset-list">
-                    <ul>
-                        <li class="file">existing-conditions-01.jpg</li>
-                        <li class="file">community-engagement-01.jpg</li>
-                        <li class="file">safety-corridor-01.jpg</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div style="margin: 20px 0;">
-                <h3 style="color: #555; margin-bottom: 10px;">🗺️ Maps</h3>
-                <p style="color: #666; margin-bottom: 10px;">Spatial visualizations and analysis maps</p>
-                <div class="asset-list">
-                    <ul>
-                        <li class="file">crash-analysis-map.jpg</li>
-                        <li class="file">priority-corridors-map.jpg</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div style="margin: 20px 0;">
-                <h3 style="color: #555; margin-bottom: 10px;">🏷️ Logos</h3>
-                <p style="color: #666; margin-bottom: 10px;">Project branding and logos</p>
-                <div class="asset-list">
-                    <ul>
-                        <li class="file">project-logo.png</li>
-                    </ul>
-                </div>
-            </div>
+      <section class="section" id="naming">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Naming convention</div>
+            <h2>Readable, stable, and StoryMap-ready.</h2>
+          </div>
+          <p class="section-copy">
+            File names should describe the project, asset type, location or subject, and sequence number. Once a file is live in the StoryMap, keep its name and folder location stable to avoid broken image links.
+          </p>
         </div>
 
-        <div class="info-box">
-            <strong>💡 Tip for GIS Story Maps:</strong>
-            <p>When configuring your story map (e.g., in ArcGIS StoryMaps, Mapbox, or similar platforms), use the full URLs provided above to embed images directly from this repository. This ensures all assets remain centralized and easy to update.</p>
+        <div class="naming-list">
+          <div class="naming-item">
+            <strong>Use lowercase only.</strong>
+            Example: <code>phase-01-route-map-01.png</code>
+          </div>
+          <div class="naming-item">
+            <strong>Use hyphens, not spaces.</strong>
+            Avoid spaces, underscores, parentheses, and special characters.</div>
+          <div class="naming-item">
+            <strong>Lead with the project or section.</strong>
+            Example: <code>future-mobility-cover-hero-01.jpg</code>
+          </div>
+          <div class="naming-item">
+            <strong>Version intentionally.</strong>
+            Use <code>-v02</code> only when a new public URL is needed.</div>
         </div>
 
-        <div class="section">
-            <h2>🚀 Getting Started</h2>
-            <ol style="margin-left: 20px; color: #666; line-height: 2;">
-                <li>Browse the <a href="https://github.com/ddecamerica/the-future-of-mobility/tree/main/storymap-assets" style="color: #667eea; text-decoration: none;">storymap-assets folder</a> on GitHub</li>
-                <li>Copy the asset URLs from the repository</li>
-                <li>Paste them into your GIS story map platform</li>
-                <li>Enjoy seamless image integration!</li>
-            </ol>
+        <div class="callout">
+          <p>
+            <strong>Important:</strong> After the freelancer places a link in the StoryMap, do not rename or move that image. Replace the file with the same name for small corrections, or create a new versioned file for major changes.
+          </p>
+          <a class="button secondary" href="https://github.com/ddecamerica/the-future-of-mobility/tree/main/storymap-assets" target="_blank" rel="noreferrer">Open assets folder</a>
         </div>
+      </section>
+    </main>
 
-        <div class="footer">
-            <p>🌍 PBI–Downtown APM Connector Project | A connected, scalable, and financially sustainable transportation future for Palm Beach County</p>
-            <p style="margin-top: 10px;"><a href="https://github.com/ddecamerica/the-future-of-mobility" style="color: #667eea; text-decoration: none;">View on GitHub</a></p>
-        </div>
-    </div>
+    <footer>
+      <span>DDEC LLC · Transportation Engineering & Mobility Advisory · West Palm Beach, Florida</span>
+      <span>StoryMap Asset Library · April 2026</span>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Copied to clipboard</div>
+
+  <script>
+    const assetBaseUrl = "https://ddecamerica.github.io/the-future-of-mobility/storymap-assets/assets/images";
+
+    const assets = [
+      {
+        category: "brand",
+        folder: "brand",
+        file: "ddec-logo-primary-black.png",
+        use: "Primary DDEC logo for light backgrounds."
+      },
+      {
+        category: "brand",
+        folder: "brand",
+        file: "ddec-logo-reverse-white.png",
+        use: "Reverse DDEC logo for dark backgrounds."
+      },
+      {
+        category: "cover",
+        folder: "cover",
+        file: "future-mobility-cover-hero-01.jpg",
+        use: "Opening hero image for The Future of Mobility StoryMap."
+      },
+      {
+        category: "statistics",
+        folder: "statistics",
+        file: "pbc-stat-new-residents-90k-01.png",
+        use: "Statistic card for new Palm Beach County residents since 2020."
+      },
+      {
+        category: "statistics",
+        folder: "statistics",
+        file: "pbc-stat-population-2030-163m-01.png",
+        use: "Statistic card for projected 2030 population."
+      },
+      {
+        category: "statistics",
+        folder: "statistics",
+        file: "pbc-stat-visitors-fy2024-25-106m-01.png",
+        use: "Statistic card for annual visitors in FY2024 to FY2025."
+      },
+      {
+        category: "statistics",
+        folder: "statistics",
+        file: "pbc-stat-drive-alone-77pct-01.png",
+        use: "Statistic card for residents who drive alone to work."
+      },
+      {
+        category: "statistics",
+        folder: "statistics",
+        file: "pbi-stat-passengers-85m-01.png",
+        use: "Statistic card for annual Palm Beach International Airport passengers."
+      },
+      {
+        category: "phase-01",
+        folder: "phase-01",
+        file: "phase-01-downtown-wpb-airport-connector-route-map-01.png",
+        use: "Primary route map for the Downtown WPB and PBI Airport connector."
+      },
+      {
+        category: "phase-01",
+        folder: "phase-01",
+        file: "phase-01-station-network-map-01.png",
+        use: "Station and network map for Phase 1."
+      },
+      {
+        category: "phase-01",
+        folder: "phase-01",
+        file: "phase-01-tamarind-ave-top-view-01.jpg",
+        use: "Top-view rendering of the Tamarind Avenue area."
+      },
+      {
+        category: "phase-01",
+        folder: "phase-01",
+        file: "phase-01-tamarind-ave-perspective-01.jpg",
+        use: "Perspective rendering of the Tamarind Avenue area."
+      },
+      {
+        category: "network",
+        folder: "network",
+        file: "regional-mobility-network-connections-01.png",
+        use: "Graphic showing how the APM connects with Palm Tran, Tri-Rail, Brightline, Amtrak, and RideWPB."
+      },
+      {
+        category: "last-mile",
+        folder: "last-mile",
+        file: "last-mile-av-zone-map-01.png",
+        use: "Map showing the autonomous vehicle first-mile and last-mile service zone."
+      }
+    ];
+
+    function assetUrl(asset) {
+      return `${assetBaseUrl}/${asset.folder}/${asset.file}`;
+    }
+
+    function renderAssets() {
+      const rows = document.getElementById("asset-rows");
+      rows.innerHTML = assets.map((asset, index) => {
+        const url = assetUrl(asset);
+        return `
+          <tr>
+            <td><span class="category-pill">${asset.category}</span></td>
+            <td class="file-name"><code>${asset.file}</code></td>
+            <td>${asset.use}</td>
+            <td class="asset-url"><code id="asset-url-${index}">${url}</code></td>
+            <td class="copy-cell"><button class="button secondary" type="button" data-copy="#asset-url-${index}">Copy link</button></td>
+          </tr>
+        `;
+      }).join("");
+    }
+
+    function showToast(message = "Copied to clipboard") {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("is-visible");
+      window.setTimeout(() => toast.classList.remove("is-visible"), 1800);
+    }
+
+    async function copyText(selector) {
+      const node = document.querySelector(selector);
+      if (!node) return;
+      const text = node.textContent.trim();
+
+      try {
+        await navigator.clipboard.writeText(text);
+        showToast();
+      } catch (error) {
+        const textArea = document.createElement("textarea");
+        textArea.value = text;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textArea);
+        showToast();
+      }
+    }
+
+    document.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-copy]");
+      if (!button) return;
+      copyText(button.getAttribute("data-copy"));
+    });
+
+    renderAssets();
+  </script>
 </body>
 </html>
