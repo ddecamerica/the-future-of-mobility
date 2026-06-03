@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBI–Downtown APM Connector | Storymap Assets</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 900px;
+            width: 100%;
+            padding: 60px 40px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 12px;
+            font-size: 2.5em;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .description {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            font-size: 1em;
+        }
+
+        .section {
+            margin: 30px 0;
+        }
+
+        .section h2 {
+            color: #667eea;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .asset-list {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+
+        .asset-list ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .asset-list li {
+            padding: 8px 0;
+            color: #555;
+            display: flex;
+            align-items: center;
+        }
+
+        .asset-list li:before {
+            content: "📁";
+            margin-right: 10px;
+            font-size: 1.1em;
+        }
+
+        .asset-list li.file:before {
+            content: "🖼️";
+        }
+
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            line-height: 1.5;
+            margin: 15px 0;
+        }
+
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196F3;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+
+        .info-box strong {
+            color: #1976D2;
+        }
+
+        .info-box p {
+            color: #555;
+            margin: 10px 0;
+        }
+
+        .footer {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 0.9em;
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background: #764ba2;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .subtitle {
+                font-size: 0.95em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🗺️ PBI–Downtown APM Connector</h1>
+        <p class="subtitle">Storymap Assets Repository</p>
+
+        <div class="description">
+            <p>Welcome to the storymap assets repository for the <strong>PBI–Downtown APM Connector</strong> project. This site hosts all media assets used in our GIS story map, including cover images, section graphics, maps, and project logos.</p>
+        </div>
+
+        <div class="info-box">
+            <strong>📍 Project Vision:</strong>
+            <p>Planning, vision, and infrastructure behind the PBI–Downtown APM Connector: A connected, scalable, and financially sustainable transportation future for Palm Beach County.</p>
+        </div>
+
+        <div class="section">
+            <h2>📂 Asset Structure</h2>
+            <div class="asset-list">
+                <ul>
+                    <li>storymap-assets/</li>
+                    <li class="indent">
+                        <ul style="margin-left: 20px;">
+                            <li>assets/</li>
+                            <li class="indent">
+                                <ul style="margin-left: 20px;">
+                                    <li>images/</li>
+                                    <li class="indent">
+                                        <ul style="margin-left: 20px;">
+                                            <li class="file">cover/ – Cover images</li>
+                                            <li class="file">sections/ – Section-specific graphics</li>
+                                            <li class="file">maps/ – Map visualizations</li>
+                                            <li class="file">logos/ – Branding assets</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🔗 How to Access Images</h2>
+            <p style="margin-bottom: 15px; color: #555;">All assets are publicly available through GitHub Pages. Use these URLs in your GIS story map:</p>
+            
+            <div class="code-block">
+https://ddecamerica.github.io/the-future-of-mobility/storymap-assets/assets/images/[category]/[filename]
+            </div>
+
+            <p style="color: #666; margin-top: 15px;"><strong>Example URLs:</strong></p>
+            <div class="asset-list">
+                <ul>
+                    <li class="file">Cover: <code style="background: #f0f0f0; padding: 2px 6px; border-radius: 3px;">...images/cover/hialeah-cover-main.jpg</code></li>
+                    <li class="file">Section: <code style="background: #f0f0f0; padding: 2px 6px; border-radius: 3px;">...images/sections/existing-conditions-01.jpg</code></li>
+                    <li class="file">Map: <code style="background: #f0f0f0; padding: 2px 6px; border-radius: 3px;">...images/maps/crash-analysis-map.jpg</code></li>
+                    <li class="file">Logo: <code style="background: #f0f0f0; padding: 2px 6px; border-radius: 3px;">...images/logos/project-logo.png</code></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>✨ Asset Categories</h2>
+            
+            <div style="margin: 20px 0;">
+                <h3 style="color: #555; margin-bottom: 10px;">📸 Cover Images</h3>
+                <p style="color: #666; margin-bottom: 10px;">Hero images for the storymap introduction</p>
+                <div class="asset-list">
+                    <ul>
+                        <li class="file">hialeah-cover-main.jpg</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin: 20px 0;">
+                <h3 style="color: #555; margin-bottom: 10px;">📋 Section Images</h3>
+                <p style="color: #666; margin-bottom: 10px;">Graphics for each storymap section</p>
+                <div class="asset-list">
+                    <ul>
+                        <li class="file">existing-conditions-01.jpg</li>
+                        <li class="file">community-engagement-01.jpg</li>
+                        <li class="file">safety-corridor-01.jpg</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin: 20px 0;">
+                <h3 style="color: #555; margin-bottom: 10px;">🗺️ Maps</h3>
+                <p style="color: #666; margin-bottom: 10px;">Spatial visualizations and analysis maps</p>
+                <div class="asset-list">
+                    <ul>
+                        <li class="file">crash-analysis-map.jpg</li>
+                        <li class="file">priority-corridors-map.jpg</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin: 20px 0;">
+                <h3 style="color: #555; margin-bottom: 10px;">🏷️ Logos</h3>
+                <p style="color: #666; margin-bottom: 10px;">Project branding and logos</p>
+                <div class="asset-list">
+                    <ul>
+                        <li class="file">project-logo.png</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <strong>💡 Tip for GIS Story Maps:</strong>
+            <p>When configuring your story map (e.g., in ArcGIS StoryMaps, Mapbox, or similar platforms), use the full URLs provided above to embed images directly from this repository. This ensures all assets remain centralized and easy to update.</p>
+        </div>
+
+        <div class="section">
+            <h2>🚀 Getting Started</h2>
+            <ol style="margin-left: 20px; color: #666; line-height: 2;">
+                <li>Browse the <a href="https://github.com/ddecamerica/the-future-of-mobility/tree/main/storymap-assets" style="color: #667eea; text-decoration: none;">storymap-assets folder</a> on GitHub</li>
+                <li>Copy the asset URLs from the repository</li>
+                <li>Paste them into your GIS story map platform</li>
+                <li>Enjoy seamless image integration!</li>
+            </ol>
+        </div>
+
+        <div class="footer">
+            <p>🌍 PBI–Downtown APM Connector Project | A connected, scalable, and financially sustainable transportation future for Palm Beach County</p>
+            <p style="margin-top: 10px;"><a href="https://github.com/ddecamerica/the-future-of-mobility" style="color: #667eea; text-decoration: none;">View on GitHub</a></p>
+        </div>
+    </div>
+</body>
+</html>
