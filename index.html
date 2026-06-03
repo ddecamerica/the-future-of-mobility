@@ -546,9 +546,9 @@
     <main id="top">
       <section class="hero">
         <div class="eyebrow">StoryMap Asset Library</div>
-        <h1>Palm Beach County’s Connected Mobility Network</h1>
+        <h1>Palm Beach County's Connected Mobility Network</h1>
         <p class="hero-lede">
-          Public image library for the GIS StoryMap supporting DDEC’s Future of Mobility proposal, including cover visuals, statistical graphics, route maps, network diagrams, and project branding.
+          Public asset library for the GIS StoryMap supporting DDEC's Future of Mobility proposal, including cover visuals, statistical graphics, guidance documents, and project branding.
         </p>
 
         <div class="meta-grid" aria-label="Project metadata">
@@ -575,25 +575,25 @@
         <div class="section-header">
           <div>
             <div class="section-kicker">Project context</div>
-            <h2>One place for every StoryMap image link.</h2>
+            <h2>One place for every StoryMap-ready visual.</h2>
           </div>
           <p class="section-copy">
-            This repository is the public source for StoryMap media assets. The main proposal presents a five-phase mobility network for Palm Beach County, with Phase 1 focused on a Downtown West Palm Beach and airport connector. This page keeps image URLs clean, consistent, and easy to share with the GIS StoryMap team.
+            This repository is the public source for StoryMap asset links. All images, graphics, and guidance documents are organized by category and accessible via GitHub Pages.
           </p>
         </div>
 
         <div class="grid-3">
           <article class="principle">
-            <strong>Phase 1 reference</strong>
-            <span>Downtown WPB and PBI Airport connector. 5.4 miles, 9 stations, elevated guideway concept.</span>
+            <strong>Centralized library</strong>
+            <span>All StoryMap-ready visuals hosted in one location with direct asset links.</span>
           </article>
           <article class="principle">
-            <strong>Network role</strong>
-            <span>Connects airport, Convention Center, CityPlace, Brightline, NoRa, Palm Tran, Tri-Rail, Amtrak, and RideWPB.</span>
+            <strong>Organized by use</strong>
+            <span>Cover images, statistical graphics, logos, and guidance documents organized by purpose.</span>
           </article>
           <article class="principle">
-            <strong>Asset purpose</strong>
-            <span>Hosts images, maps, graphics, and brand assets used by the GIS StoryMap freelancer.</span>
+            <strong>Stable URLs</strong>
+            <span>Once added to StoryMap production, asset links remain unchanged for reliability.</span>
           </article>
         </div>
       </section>
@@ -601,29 +601,29 @@
       <section class="section" id="assets">
         <div class="section-header">
           <div>
-            <div class="section-kicker">Direct URLs</div>
-            <h2>Copy links from the asset catalog.</h2>
+            <div class="section-kicker">Asset Links</div>
+            <h2>Copy links for StoryMap production.</h2>
           </div>
           <p class="section-copy">
-            Use the full GitHub Pages URL in ArcGIS StoryMaps or any other web-based GIS publishing tool. Upload the files using the exact folder and file names shown below, then copy the generated public links.
+            Use the GitHub Pages URLs below in ArcGIS StoryMaps or other web-based presentation tools. Select the asset you need and copy the URL directly into your project.
           </p>
         </div>
 
         <div class="path-card">
-          <code id="base-url">https://ddecamerica.github.io/the-future-of-mobility/storymap-assets/assets/images</code>
-          <button class="button secondary" type="button" data-copy="#base-url">Copy base URL</button>
+          <code id="image-base-url">https://ddecamerica.github.io/the-future-of-mobility/storymap-assets/assets/images</code>
+          <button class="button secondary" type="button" data-copy="#image-base-url">Copy base URL</button>
         </div>
 
         <div class="rule"></div>
 
-        <div class="asset-table-wrap" role="region" aria-label="Recommended StoryMap asset catalog" tabindex="0">
+        <div class="asset-table-wrap" role="region" aria-label="StoryMap asset catalog" tabindex="0">
           <table>
             <thead>
               <tr>
                 <th>Category</th>
-                <th>Recommended file name</th>
+                <th>File name</th>
                 <th>Use in StoryMap</th>
-                <th>Direct URL</th>
+                <th>Asset link</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -636,37 +636,29 @@
         <div class="section-header">
           <div>
             <div class="section-kicker">Folder structure</div>
-            <h2>Keep the repo organized by use case.</h2>
+            <h2>Assets organized by category and purpose.</h2>
           </div>
           <p class="section-copy">
-            The structure below avoids unrelated labels like Hialeah, crash analysis, or community engagement. It is specific to The Future of Mobility and the Palm Beach County APM concept.
+            The structure below keeps the asset library organized for StoryMap production and maintenance. Each folder contains specific asset types for different sections and purposes.
           </p>
         </div>
 
         <div class="folder-tree">
           <article class="folder">
-            <code>assets/images/brand/</code>
-            <p>DDEC logos, project marks, and neutral brand assets.</p>
-          </article>
-          <article class="folder">
             <code>assets/images/cover/</code>
-            <p>Hero images and opening visuals for the StoryMap.</p>
+            <p>Hero and opening visuals for StoryMap introduction.</p>
           </article>
           <article class="folder">
-            <code>assets/images/statistics/</code>
-            <p>Visual cards for population, visitors, airport passengers, and travel behavior.</p>
+            <code>assets/images/sections/</code>
+            <p>Statistical graphics, data visualizations, and section-specific visuals.</p>
           </article>
           <article class="folder">
-            <code>assets/images/phase-01/</code>
-            <p>Route maps, station graphics, and visuals for the Downtown WPB and PBI connector.</p>
+            <code>assets/images/logos/</code>
+            <p>DDEC and project branding marks.</p>
           </article>
           <article class="folder">
-            <code>assets/images/network/</code>
-            <p>Regional network integration graphics and transit connection diagrams.</p>
-          </article>
-          <article class="folder">
-            <code>assets/images/last-mile/</code>
-            <p>Autonomous vehicle zone graphics and first-mile or last-mile connection visuals.</p>
+            <code>assets/documents/guidance/</code>
+            <p>Production guidance, styleguides, and reference documents.</p>
           </article>
         </div>
       </section>
@@ -678,30 +670,30 @@
             <h2>Readable, stable, and StoryMap-ready.</h2>
           </div>
           <p class="section-copy">
-            File names should describe the project, asset type, location or subject, and sequence number. Once a file is live in the StoryMap, keep its name and folder location stable to avoid broken image links.
+            File names should describe the asset type, subject, and sequence. Keep names consistent for easy identification and reliable URL references in StoryMap production.
           </p>
         </div>
 
         <div class="naming-list">
           <div class="naming-item">
             <strong>Use lowercase only.</strong>
-            Example: <code>phase-01-route-map-01.png</code>
+            Example: <code>pbc-stat-drive-alone-77pct-01.png</code>
           </div>
           <div class="naming-item">
             <strong>Use hyphens, not spaces.</strong>
             Avoid spaces, underscores, parentheses, and special characters.</div>
           <div class="naming-item">
-            <strong>Lead with the project or section.</strong>
-            Example: <code>future-mobility-cover-hero-01.jpg</code>
+            <strong>Lead with the subject.</strong>
+            Example: <code>future-mobility-cover-hero-01.png</code>
           </div>
           <div class="naming-item">
             <strong>Version intentionally.</strong>
-            Use <code>-v02</code> only when a new public URL is needed.</div>
+            Use <code>-02</code> only when a new public URL is needed.</div>
         </div>
 
         <div class="callout">
           <p>
-            <strong>Important:</strong> After the freelancer places a link in the StoryMap, do not rename or move that image. Replace the file with the same name for small corrections, or create a new versioned file for major changes.
+            <strong>Important:</strong> Once an asset URL has been added to the StoryMap, keep the file name and folder location unchanged. For minor corrections, replace the file using the same name. For major revisions, create a versioned file and update the StoryMap link intentionally.
           </p>
           <a class="button secondary" href="https://github.com/ddecamerica/the-future-of-mobility/tree/main/storymap-assets" target="_blank" rel="noreferrer">Open assets folder</a>
         </div>
@@ -710,104 +702,250 @@
 
     <footer>
       <span>DDEC LLC · Transportation Engineering & Mobility Advisory · West Palm Beach, Florida</span>
-      <span>StoryMap Asset Library · April 2026</span>
+      <span>StoryMap Asset Library · June 2026</span>
     </footer>
   </div>
 
   <div class="toast" id="toast" role="status" aria-live="polite">Copied to clipboard</div>
 
   <script>
-    const assetBaseUrl = "https://ddecamerica.github.io/the-future-of-mobility/storymap-assets/assets/images";
+    const imageBaseUrl = "https://ddecamerica.github.io/the-future-of-mobility/storymap-assets/assets/images";
+    const documentBaseUrl = "https://ddecamerica.github.io/the-future-of-mobility/storymap-assets/assets/documents";
 
     const assets = [
+      // Cover Images
       {
-        category: "brand",
-        folder: "brand",
-        file: "ddec-logo-primary-black.png",
-        use: "Primary DDEC logo for light backgrounds."
-      },
-      {
-        category: "brand",
-        folder: "brand",
-        file: "ddec-logo-reverse-white.png",
-        use: "Reverse DDEC logo for dark backgrounds."
+        category: "cover",
+        folder: "cover",
+        file: "future-mobility-cover-hero-01.png",
+        use: "Hero image for StoryMap introduction."
       },
       {
         category: "cover",
         folder: "cover",
-        file: "future-mobility-cover-hero-01.jpg",
-        use: "Opening hero image for The Future of Mobility StoryMap."
+        file: "future-mobility-cover-hero-02.png",
+        use: "Alternative hero image for StoryMap introduction."
+      },
+      // Logos
+      {
+        category: "logos",
+        folder: "logos",
+        file: "ddec-logo-primary-black.png",
+        use: "Primary DDEC logo for light backgrounds."
       },
       {
-        category: "statistics",
-        folder: "statistics",
-        file: "pbc-stat-new-residents-90k-01.png",
-        use: "Statistic card for new Palm Beach County residents since 2020."
+        category: "logos",
+        folder: "logos",
+        file: "ddec-logo-reverse-white.png",
+        use: "Reverse DDEC logo for dark backgrounds."
       },
+      // Statistics - Drive Alone
       {
         category: "statistics",
-        folder: "statistics",
-        file: "pbc-stat-population-2030-163m-01.png",
-        use: "Statistic card for projected 2030 population."
-      },
-      {
-        category: "statistics",
-        folder: "statistics",
-        file: "pbc-stat-visitors-fy2024-25-106m-01.png",
-        use: "Statistic card for annual visitors in FY2024 to FY2025."
-      },
-      {
-        category: "statistics",
-        folder: "statistics",
+        folder: "sections",
         file: "pbc-stat-drive-alone-77pct-01.png",
-        use: "Statistic card for residents who drive alone to work."
+        use: "Drive-alone statistic card variant 1."
       },
       {
         category: "statistics",
-        folder: "statistics",
+        folder: "sections",
+        file: "pbc-stat-drive-alone-77pct-01-mini.png",
+        use: "Drive-alone statistic card variant 1 (mini)."
+      },
+      {
+        category: "statistics",
+        folder: "sections",
+        file: "pbc-stat-drive-alone-77pct-02.png",
+        use: "Drive-alone statistic card variant 2."
+      },
+      {
+        category: "statistics",
+        folder: "sections",
+        file: "pbc-stat-drive-alone-77pct-02-mini.png",
+        use: "Drive-alone statistic card variant 2 (mini)."
+      },
+      {
+        category: "statistics",
+        folder: "sections",
+        file: "pbc-stat-drive-alone-77pct-03.png",
+        use: "Drive-alone statistic card variant 3."
+      },
+      {
+        category: "statistics",
+        folder: "sections",
+        file: "pbc-stat-drive-alone-77pct-03-mini.png",
+        use: "Drive-alone statistic card variant 3 (mini)."
+      },
+      // Statistics - New Residents
+      {
+        category: "statistics",
+        folder: "sections",
+        file: "pbc-stat-new-residents-90k-01.png",
+        use: "New residents statistic card variant 1."
+      },
+      {
+        category: "statistics",
+        folder: "sections",
+        file: "pbc-stat-new-residents-90k-01-mini.png",
+        use: "New residents statistic card variant 1 (mini)."
+      },
+      {
+        category: "statistics",
+        folder: "sections",
+        file: "pbc-stat-new-residents-90k-02.png",
+        use: "New residents statistic card variant 2."
+      },
+      {
+        category: "statistics",
+        folder: "sections",
+        file: "pbc-stat-new-residents-90k-02-mini.png",
+        use: "New residents statistic card variant 2 (mini)."
+      },
+      {
+        category: "statistics",
+        folder: "sections",
+        file: "pbc-stat-new-residents-90k-03.png",
+        use: "New residents statistic card variant 3."
+      },
+      {
+        category: "statistics",
+        folder: "sections",
+        file: "pbc-stat-new-residents-90k-03-mini.png",
+        use: "New residents statistic card variant 3 (mini)."
+      },
+      // Statistics - Population 2030
+      {
+        category: "statistics",
+        folder: "sections",
+        file: "pbc-stat-population-2030-163m-01.png",
+        use: "Population 2030 projection card variant 1."
+      },
+      {
+        category: "statistics",
+        folder: "sections",
+        file: "pbc-stat-population-2030-163m-01-mini.png",
+        use: "Population 2030 projection card variant 1 (mini)."
+      },
+      {
+        category: "statistics",
+        folder: "sections",
+        file: "pbc-stat-population-2030-163m-02.png",
+        use: "Population 2030 projection card variant 2."
+      },
+      {
+        category: "statistics",
+        folder: "sections",
+        file: "pbc-stat-population-2030-163m-02-mini.png",
+        use: "Population 2030 projection card variant 2 (mini)."
+      },
+      {
+        category: "statistics",
+        folder: "sections",
+        file: "pbc-stat-population-2030-163m-03.png",
+        use: "Population 2030 projection card variant 3."
+      },
+      {
+        category: "statistics",
+        folder: "sections",
+        file: "pbc-stat-population-2030-163m-03-mini.png",
+        use: "Population 2030 projection card variant 3 (mini)."
+      },
+      // Statistics - Visitors
+      {
+        category: "statistics",
+        folder: "sections",
+        file: "pbc-stat-visitors-fy2024-25-106m-01.png",
+        use: "Annual visitors statistic card variant 1."
+      },
+      {
+        category: "statistics",
+        folder: "sections",
+        file: "pbc-stat-visitors-fy2024-25-106m-01-mini.png",
+        use: "Annual visitors statistic card variant 1 (mini)."
+      },
+      {
+        category: "statistics",
+        folder: "sections",
+        file: "pbc-stat-visitors-fy2024-25-106m-02.png",
+        use: "Annual visitors statistic card variant 2."
+      },
+      {
+        category: "statistics",
+        folder: "sections",
+        file: "pbc-stat-visitors-fy2024-25-106m-02-mini.png",
+        use: "Annual visitors statistic card variant 2 (mini)."
+      },
+      {
+        category: "statistics",
+        folder: "sections",
+        file: "pbc-stat-visitors-fy2024-25-106m-03.png",
+        use: "Annual visitors statistic card variant 3."
+      },
+      {
+        category: "statistics",
+        folder: "sections",
+        file: "pbc-stat-visitors-fy2024-25-106m-03-mini.png",
+        use: "Annual visitors statistic card variant 3 (mini)."
+      },
+      // Statistics - PBI Passengers
+      {
+        category: "statistics",
+        folder: "sections",
         file: "pbi-stat-passengers-85m-01.png",
-        use: "Statistic card for annual Palm Beach International Airport passengers."
+        use: "PBI passengers statistic card variant 1."
       },
       {
-        category: "phase-01",
-        folder: "phase-01",
-        file: "phase-01-downtown-wpb-airport-connector-route-map-01.png",
-        use: "Primary route map for the Downtown WPB and PBI Airport connector."
+        category: "statistics",
+        folder: "sections",
+        file: "pbi-stat-passengers-85m-01-mini.png",
+        use: "PBI passengers statistic card variant 1 (mini)."
       },
       {
-        category: "phase-01",
-        folder: "phase-01",
-        file: "phase-01-station-network-map-01.png",
-        use: "Station and network map for Phase 1."
+        category: "statistics",
+        folder: "sections",
+        file: "pbi-stat-passengers-85m-02.png",
+        use: "PBI passengers statistic card variant 2."
       },
       {
-        category: "phase-01",
-        folder: "phase-01",
-        file: "phase-01-tamarind-ave-top-view-01.jpg",
-        use: "Top-view rendering of the Tamarind Avenue area."
+        category: "statistics",
+        folder: "sections",
+        file: "pbi-stat-passengers-85m-02-mini.png",
+        use: "PBI passengers statistic card variant 2 (mini)."
       },
       {
-        category: "phase-01",
-        folder: "phase-01",
-        file: "phase-01-tamarind-ave-perspective-01.jpg",
-        use: "Perspective rendering of the Tamarind Avenue area."
+        category: "statistics",
+        folder: "sections",
+        file: "pbi-stat-passengers-85m-03.png",
+        use: "PBI passengers statistic card variant 3."
       },
       {
-        category: "network",
-        folder: "network",
-        file: "regional-mobility-network-connections-01.png",
-        use: "Graphic showing how the APM connects with Palm Tran, Tri-Rail, Brightline, Amtrak, and RideWPB."
+        category: "statistics",
+        folder: "sections",
+        file: "pbi-stat-passengers-85m-03-mini.png",
+        use: "PBI passengers statistic card variant 3 (mini)."
+      },
+      // Guidance Documents
+      {
+        category: "guidance",
+        folder: "../documents/guidance",
+        file: "future-mobility-storymap-guidance.pdf",
+        use: "StoryMap production guidance and reference document.",
+        type: "document"
       },
       {
-        category: "last-mile",
-        folder: "last-mile",
-        file: "last-mile-av-zone-map-01.png",
-        use: "Map showing the autonomous vehicle first-mile and last-mile service zone."
+        category: "guidance",
+        folder: "../documents/guidance",
+        file: "future-mobility-storymap-guidance-optimized.pdf",
+        use: "Optimized guidance document for digital distribution.",
+        type: "document"
       }
     ];
 
     function assetUrl(asset) {
-      return `${assetBaseUrl}/${asset.folder}/${asset.file}`;
+      if (asset.type === "document") {
+        return `${documentBaseUrl}/${asset.folder.replace("../documents/", "")}/${asset.file}`;
+      }
+      return `${imageBaseUrl}/${asset.folder}/${asset.file}`;
     }
 
     function renderAssets() {
